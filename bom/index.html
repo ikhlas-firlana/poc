@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+    <body>
+        <button name="btn" id="btn"></button>
+        <script>
+            document.getElementById('btn').addEventListener('click', function() {
+            // window.onload = function() {
+                // window.open("https://google.com")
+            // }/
+                // window.resizeTo(
+                //     window.screen.availWidth / 2,
+                //     window.screen.availHeight / 2
+                // );
+                console.log("==============navigator============");
+                console.log("appName", navigator.appName);
+                console.log("appCodeName",navigator.appCodeName);
+                console.log("platform",navigator.platform);
+                console.log("product",navigator.product);
+                console.log("appVersion",navigator.appVersion);
+                console.log("userAgent",navigator.userAgent); 
+                console.log("language",navigator.language);  
+                console.log("onLine",navigator.onLine);  
+                console.log("cookieEnabled",navigator.cookieEnabled);
+                console.log("javaEnabled()",navigator.javaEnabled());
+                console.log("==============documennt============");
+                console.log("cookie",document.cookie);
+            });
+        </script>
+    </body>
+</html>
