@@ -1,0 +1,14 @@
+{
+  "name": "pupeteerjs-big-bad-wolf",
+  "version": "0.0.1",
+  "description": "populate books to json with pupeteerjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ikhlas firlana <ifirlana@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^1.12.2"
+  }
+}
