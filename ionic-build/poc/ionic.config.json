@@ -1,0 +1,10 @@
+{
+  "name": "poc",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "v2": true,
+  "typescript": true,
+  "id": "23f98a42"
+}
