@@ -1,0 +1,18 @@
+{
+    "android": {
+        "debug": {
+            "keystore": "./android.keystore",
+            "storePassword": "helloworld",
+            "alias": "poc",
+            "password" : "helloworld",
+            "keystoreType": "jks"
+        },
+        "release": {
+            "keystore": "./android.keystore",
+            "storePassword": "helloworld",
+            "alias": "poc",
+            "password" : "helloworld",
+            "keystoreType": "jks"
+        }
+    }
+}

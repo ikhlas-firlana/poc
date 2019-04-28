@@ -1,6 +1,6 @@
 {
   "name": "poc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
@@ -10,7 +10,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:android": "ionic cordova run android --device"
+    "getting:start": "ionic cordova platform add android && ionic cordova plugin add cordova-plugin-camera",
+    "start:keystore": "keytool -genkey -v -keystore android.jks -keyalg RSA -keysize 2048 -validity 10000 -alias poc && copy",
+    "build:android:serve": "ionic cordova build android --debug --buildConfig=build.json",
+    "build:prod:android": "ionic cordova build android --prod --release --buildConfig=build.json",
+    "android:serve:device": "ionic cordova run android --device",
+    "android:serve": "ionic cordova run android -l"
   },
   "private": true,
   "dependencies": {
@@ -21,12 +26,13 @@
     "@angular/platform-browser": "^7.2.2",
     "@angular/platform-browser-dynamic": "^7.2.2",
     "@angular/router": "^7.2.2",
+    "@ionic-native/camera": "^5.5.0",
     "@ionic-native/core": "^5.0.0",
     "@ionic-native/splash-screen": "^5.0.0",
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^4.1.0",
-    "cordova-android": "7.1.4",
-    "cordova-ios": "4.5.5",
+    "cordova-android": "^8.0.0",
+    "cordova-plugin-camera": "4.0.3",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.1.3",
     "cordova-plugin-ionic-webview": "^3.1.2",
@@ -47,13 +53,13 @@
     "@angular/compiler-cli": "~7.2.2",
     "@angular/language-service": "~7.2.2",
     "@ionic/angular-toolkit": "~1.4.0",
-    "@types/node": "~10.14.2",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~10.14.2",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~3.1.4",
+    "karma": "^4.1.0",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
@@ -73,11 +79,11 @@
       "cordova-plugin-ionic-webview": {
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
-      "cordova-plugin-ionic-keyboard": {}
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-camera": {}
     },
     "platforms": [
-      "android",
-      "ios"
+      "android"
     ]
   }
 }
