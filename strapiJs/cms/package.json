@@ -24,7 +24,7 @@
     "strapi-hook-bookshelf": "3.0.0-alpha.24.1",
     "strapi-hook-knex": "3.0.0-alpha.24.1",
     "knex": "latest",
-    "sqlite3": "latest"
+    "mysql": "2.17.1"
   },
   "author": {
     "name": "develop",
@@ -40,7 +40,7 @@
   ],
   "strapi": {
     "packageManager": "npm",
-    "uuid": "591c5649-e8ef-4084-9d83-d133910f5fd2"
+    "uuid": "c21d702f-f0e1-414b-82b9-ff3dbd104c74"
   },
   "engines": {
     "node": ">= 10.0.0",

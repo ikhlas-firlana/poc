@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "restaurants",
+  "info": {
+    "name": "restaurant",
+    "description": "place where food and drink served"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "Name": {
+      "default": "",
+      "unique": true,
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "default": "",
+      "type": "text"
+    },
+    "category": {
+      "collection": "category",
+      "via": "restaurant"
+    }
+  }
+}
